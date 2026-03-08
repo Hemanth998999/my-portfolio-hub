@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import myPhoto from "@/assets/MyPhoto.jpg";
+
 
 const HeroSection = () => {
   return (
@@ -12,9 +12,9 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
         {/* Text content */}
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <a href="/My_Resume.pdf" download="Venkata_Satya_Narasimha_Resume.pdf">
               <Button className="rounded-full px-6 gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
@@ -95,23 +95,6 @@ const HeroSection = () => {
             <ArrowDown size={24} />
           </motion.a>
         </div>
-
-        {/* Photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="shrink-0"
-        >
-          <div className="relative">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/50 to-accent/50 blur-md" />
-            <img
-              src={myPhoto}
-              alt="Yembuluri H N Venkata Satya Narasimha"
-              className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-2 border-border"
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

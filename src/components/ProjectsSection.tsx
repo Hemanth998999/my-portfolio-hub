@@ -18,8 +18,16 @@ const projects = [
   },
   {
     title: "Community Connect Hub",
-    description: "A community platform where users can discover and participate in local events and services. Built using the MEAN stack.",
-    tech: ["MongoDB", "Express.js", "Angular", "Node.js"],
+    role: "Frontend Developer",
+    description: "Developed the frontend interface for a community platform that helps users discover local events and services. Implemented responsive UI components and integrated Firebase Authentication to enable secure user login and registration.",
+    contributions: [
+      "Designed and developed the frontend user interface for the platform.",
+      "Built responsive pages for browsing community events and services.",
+      "Integrated Firebase Authentication for secure user login and signup.",
+      "Connected the frontend with Firebase backend services for user management.",
+      "Focused on user experience, layout structure, and clean UI design.",
+    ],
+    tech: ["HTML", "CSS", "JavaScript", "Angular", "Firebase Authentication"],
     link: "https://hemanth998999.github.io/Community-Connect-Hub/pages/community.html",
   },
 ];
@@ -49,12 +57,22 @@ const ProjectsSection = () => {
               className="glass-card rounded-lg p-6 flex flex-col group hover:border-primary/30 transition-colors"
             >
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+                {"role" in project && (
+                  <p className="text-xs text-primary font-medium mb-3">{(project as any).role}</p>
+                )}
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
+                {"contributions" in project && (
+                  <ul className="text-xs text-muted-foreground mb-4 space-y-1 list-disc list-inside">
+                    {(project as any).contributions.map((c: string) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tech.map((t) => (
                     <Badge key={t} variant="secondary" className="text-xs font-normal">
