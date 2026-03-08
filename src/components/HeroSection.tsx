@@ -55,23 +55,31 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
-          <a href="https://github.com/Hemanth998999" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
-              <Github size={20} />
+          <a href="/My_Resume.pdf" download="Venkata_Satya_Narasimha_Resume.pdf">
+            <Button className="rounded-full px-6 gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Download size={18} />
+              Download Resume
             </Button>
           </a>
-          <a href="https://www.linkedin.com/in/yembuluri-h-n-venkata-satya-narasimha-0719192a4/" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
-              <Linkedin size={20} />
-            </Button>
-          </a>
-          <a href="mailto:hemanthyembuluri777@gmail.com">
-            <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
-              <Mail size={20} />
-            </Button>
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="https://github.com/Hemanth998999" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
+                <Github size={20} />
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/yembuluri-h-n-venkata-satya-narasimha-0719192a4/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
+                <Linkedin size={20} />
+              </Button>
+            </a>
+            <a href="mailto:hemanthyembuluri777@gmail.com">
+              <Button variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:text-primary">
+                <Mail size={20} />
+              </Button>
+            </a>
+          </div>
         </motion.div>
 
         <motion.a
