@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import myPhoto from "@/assets/MyPhoto.jpg";
+
 
 const HeroSection = () => {
   return (

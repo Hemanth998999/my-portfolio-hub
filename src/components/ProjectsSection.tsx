@@ -18,8 +18,16 @@ const projects = [
   },
   {
     title: "Community Connect Hub",
-    description: "A community platform where users can discover and participate in local events and services. Built using the MEAN stack.",
-    tech: ["MongoDB", "Express.js", "Angular", "Node.js"],
+    role: "Frontend Developer",
+    description: "Developed the frontend interface for a community platform that helps users discover local events and services. Implemented responsive UI components and integrated Firebase Authentication to enable secure user login and registration.",
+    contributions: [
+      "Designed and developed the frontend user interface for the platform.",
+      "Built responsive pages for browsing community events and services.",
+      "Integrated Firebase Authentication for secure user login and signup.",
+      "Connected the frontend with Firebase backend services for user management.",
+      "Focused on user experience, layout structure, and clean UI design.",
+    ],
+    tech: ["HTML", "CSS", "JavaScript", "Angular", "Firebase Authentication"],
     link: "https://hemanth998999.github.io/Community-Connect-Hub/pages/community.html",
   },
 ];

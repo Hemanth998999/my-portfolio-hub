@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     title: "Web Development",
-    skills: ["HTML", "CSS", "JavaScript", "MongoDB", "Express.js", "Angular", "Node.js"],
+    skills: ["HTML", "CSS", "JavaScript", "MongoDB"],
   },
   {
     title: "Databases",
@@ -24,6 +24,10 @@ const skillCategories = [
   {
     title: "Tools & Platforms",
     skills: ["Git & GitHub", "Google Colab", "Jupyter Notebook", "VS Code", "Linux"],
+  },
+  {
+    title: "AI & Productivity Tools",
+    skills: ["ChatGPT", "GitHub Copilot", "Lovable", "Claude / AI Assistants", "Prompt Engineering"],
   },
 ];
 
