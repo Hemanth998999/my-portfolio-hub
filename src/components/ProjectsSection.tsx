@@ -57,12 +57,22 @@ const ProjectsSection = () => {
               className="glass-card rounded-lg p-6 flex flex-col group hover:border-primary/30 transition-colors"
             >
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+                {"role" in project && (
+                  <p className="text-xs text-primary font-medium mb-3">{(project as any).role}</p>
+                )}
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
+                {"contributions" in project && (
+                  <ul className="text-xs text-muted-foreground mb-4 space-y-1 list-disc list-inside">
+                    {(project as any).contributions.map((c: string) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tech.map((t) => (
                     <Badge key={t} variant="secondary" className="text-xs font-normal">
