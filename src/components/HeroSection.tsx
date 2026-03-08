@@ -95,7 +95,9 @@ const HeroSection = () => {
             <ArrowDown size={24} />
           </motion.a>
         </div>
-
-
+      </div>
+    </section>
+  );
+};
 
 export default HeroSection;
