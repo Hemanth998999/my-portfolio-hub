@@ -6,45 +6,55 @@ import certJavaFullstack from "@/assets/cert-java-fullstack.jpg";
 import certGoogleAiml from "@/assets/cert-google-aiml.jpg";
 import certAltairDs from "@/assets/cert-altair-datascience.jpg";
 import certChatgpt from "@/assets/cert-chatgpt-genai.jpg";
+import certBe10x from "@/assets/cert-be10x-workshop.jpg";
+import certGoogleCloud from "@/assets/cert-google-cloud.jpg";
+import certHexartAdvance from "@/assets/cert-hexart-advance.jpg";
+import certHexartFoundation from "@/assets/cert-hexart-foundation.jpg";
+import certMlConnect from "@/assets/cert-ml-connect.jpg";
+import certHackerrankProblem from "@/assets/cert-hackerrank-problem.jpg";
+import certHackerrankSql from "@/assets/cert-hackerrank-sql.jpg";
+import certUdemyMl from "@/assets/cert-udemy-ml.jpg";
+import certUdemyPython from "@/assets/cert-udemy-python.jpg";
+import certHackoverflow from "@/assets/cert-hackoverflow.jpg";
 
 const certifications = [
   {
     category: "Artificial Intelligence & Machine Learning",
     items: [
-      { name: "Machine Learning A-Z: AI, Python & R + ChatGPT (2024)", issuer: "Udemy" },
+      { name: "Machine Learning A-Z: AI, Python & R + ChatGPT (2024)", issuer: "Udemy", image: certUdemyMl },
       { name: "AI & Machine Learning Course (Google for Developers)", issuer: "EduSkills", image: certGoogleAiml },
-      { name: "AI Advanced", issuer: "Hexart" },
-      { name: "AI Foundation", issuer: "Hexart" },
+      { name: "AI Advanced", issuer: "Hexart", image: certHexartAdvance },
+      { name: "AI Foundation", issuer: "Hexart", image: certHexartFoundation },
       { name: "Generative AI / ChatGPT Certification", issuer: "Blackbuck", image: certChatgpt },
     ],
   },
   {
     category: "Programming & Development",
     items: [
-      { name: "100 Days of Code: The Complete Python Pro Bootcamp", issuer: "Udemy" },
+      { name: "100 Days of Code: The Complete Python Pro Bootcamp", issuer: "Udemy", image: certUdemyPython },
       { name: "Java Full Stack Development Certificate", issuer: "Blackbuck", image: certJavaFullstack },
     ],
   },
   {
     category: "Data & Problem Solving",
     items: [
-      { name: "SQL (Basic)", issuer: "HackerRank" },
-      { name: "Problem Solving (Basic)", issuer: "HackerRank" },
+      { name: "SQL (Basic)", issuer: "HackerRank", image: certHackerrankSql },
+      { name: "Problem Solving (Basic)", issuer: "HackerRank", image: certHackerrankProblem },
       { name: "Data Science Master (Altair RapidMiner)", issuer: "EduSkills", image: certAltairDs },
     ],
   },
   {
     category: "Cloud & Workshops",
     items: [
-      { name: "Google Cloud Career Launchpad", issuer: "Google Cloud" },
-      { name: "AI Tools Workshop", issuer: "Be10x" },
-      { name: "ML Connect Workshop", issuer: "SRKR ACE" },
+      { name: "Google Cloud Career Launchpad", issuer: "Google Cloud", image: certGoogleCloud },
+      { name: "AI Tools Workshop", issuer: "Be10x", image: certBe10x },
+      { name: "ML Connect Workshop", issuer: "SRKR ACE", image: certMlConnect },
     ],
   },
   {
     category: "Leadership & Achievements",
     items: [
-      { name: "HackOverflow – Event Organizer", issuer: "SRKR Coding Club" },
+      { name: "HackOverflow – Event Organizer", issuer: "SRKR Coding Club", image: certHackoverflow },
       { name: "Art Fusion – 1st Prize (Coin Collection Showcase)", issuer: "SRKR Event Organizing Cell" },
     ],
   },
