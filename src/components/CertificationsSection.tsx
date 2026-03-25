@@ -1,22 +1,28 @@
-import { motion } from "framer-motion";
-import { Award, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Award, ExternalLink, X, ZoomIn } from "lucide-react";
+
+import certJavaFullstack from "@/assets/cert-java-fullstack.jpg";
+import certGoogleAiml from "@/assets/cert-google-aiml.jpg";
+import certAltairDs from "@/assets/cert-altair-datascience.jpg";
+import certChatgpt from "@/assets/cert-chatgpt-genai.jpg";
 
 const certifications = [
   {
     category: "Artificial Intelligence & Machine Learning",
     items: [
       { name: "Machine Learning A-Z: AI, Python & R + ChatGPT (2024)", issuer: "Udemy" },
-      { name: "AI & Machine Learning Course (Google for Developers)", issuer: "EduSkills" },
+      { name: "AI & Machine Learning Course (Google for Developers)", issuer: "EduSkills", image: certGoogleAiml },
       { name: "AI Advanced", issuer: "Hexart" },
       { name: "AI Foundation", issuer: "Hexart" },
-      { name: "Generative AI / ChatGPT Certification", issuer: "Blackbuck" },
+      { name: "Generative AI / ChatGPT Certification", issuer: "Blackbuck", image: certChatgpt },
     ],
   },
   {
     category: "Programming & Development",
     items: [
       { name: "100 Days of Code: The Complete Python Pro Bootcamp", issuer: "Udemy" },
-      { name: "Java Full Stack Development Certificate", issuer: "Blackbuck" },
+      { name: "Java Full Stack Development Certificate", issuer: "Blackbuck", image: certJavaFullstack },
     ],
   },
   {
@@ -24,6 +30,7 @@ const certifications = [
     items: [
       { name: "SQL (Basic)", issuer: "HackerRank" },
       { name: "Problem Solving (Basic)", issuer: "HackerRank" },
+      { name: "Data Science Master (Altair RapidMiner)", issuer: "EduSkills", image: certAltairDs },
     ],
   },
   {
@@ -82,6 +89,8 @@ const credlyBadges = [
 ];
 
 const CertificationsSection = () => {
+  const [viewingCert, setViewingCert] = useState<string | null>(null);
+
   return (
     <section id="certifications" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -163,10 +172,19 @@ const CertificationsSection = () => {
                 {cat.items.map((item) => (
                   <li key={item.name} className="flex gap-3 items-start">
                     <Award size={16} className="text-primary shrink-0 mt-0.5" />
-                    <div>
+                    <div className="flex-1">
                       <p className="text-sm font-medium text-foreground">{item.name}</p>
                       <p className="text-xs text-muted-foreground">{item.issuer}</p>
                     </div>
+                    {item.image && (
+                      <button
+                        onClick={() => setViewingCert(item.image!)}
+                        className="shrink-0 text-primary/60 hover:text-primary transition-colors"
+                        title="View certificate"
+                      >
+                        <ZoomIn size={16} />
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -174,6 +192,39 @@ const CertificationsSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Certificate Viewer Modal */}
+      <AnimatePresence>
+        {viewingCert && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setViewingCert(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-4xl w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setViewingCert(null)}
+                className="absolute -top-10 right-0 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X size={24} />
+              </button>
+              <img
+                src={viewingCert}
+                alt="Certificate"
+                className="w-full rounded-lg shadow-2xl border border-border"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
