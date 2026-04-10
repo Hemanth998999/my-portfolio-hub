@@ -7,11 +7,11 @@ const skillCategories = [
   },
   {
     title: "Machine Learning & AI",
-    skills: ["Machine Learning", "Deep Learning", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Feature Engineering"],
+    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Feature Engineering"],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["TensorFlow", "Keras", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
+    skills: ["TensorFlow", "Keras", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Pillow"],
   },
   {
     title: "Web Development",
@@ -23,7 +23,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Platforms",
-    skills: ["Git & GitHub", "Google Colab", "Jupyter Notebook", "VS Code", "Linux"],
+    skills: ["Git & GitHub", "Git LFS", "Google Colab", "Jupyter Notebook", "VS Code", "Linux", "Streamlit Cloud"],
   },
   {
     title: "AI & Productivity Tools",

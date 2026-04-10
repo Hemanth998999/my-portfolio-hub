@@ -17,6 +17,13 @@ const projects = [
     link: null,
   },
   {
+    title: "Brain Tumor Detection (End-to-End)",
+    description: "Built an end-to-end deep learning application that classifies MRI brain scans into four categories (Glioma, Meningioma, Pituitary, No Tumor) using EfficientNetB4 with 95%+ accuracy. Deployed as a real-time web app with confidence scores and probability distribution visualization.",
+    tech: ["Python", "TensorFlow", "Keras", "EfficientNetB4", "Streamlit", "NumPy", "Pillow"],
+    link: "https://brain-tumor-detection-hemanth.streamlit.app/",
+    github: "https://github.com/Hemanth998999/brain-tumor-detection",
+  },
+  {
     title: "Community Connect Hub",
     description: "Developed the frontend interface for a community platform that helps users discover local events and services. Implemented responsive UI components and integrated Firebase Authentication to enable secure user login and registration.",
     tech: ["HTML", "CSS", "JavaScript", "Angular", "Firebase Authentication"],
