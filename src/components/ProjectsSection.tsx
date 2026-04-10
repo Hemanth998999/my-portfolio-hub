@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -15,6 +15,13 @@ const projects = [
     description: "Built a deep learning model to recognize and classify traffic signs using the German Traffic Sign Recognition Benchmark (GTSRB) dataset.",
     tech: ["Python", "TensorFlow", "CNN", "OpenCV"],
     link: null,
+  },
+  {
+    title: "Brain Tumor Detection (End-to-End)",
+    description: "Built an end-to-end deep learning application that classifies MRI brain scans into four categories (Glioma, Meningioma, Pituitary, No Tumor) using EfficientNetB4 with 95%+ accuracy. Deployed as a real-time web app with confidence scores and probability distribution visualization.",
+    tech: ["Python", "TensorFlow", "Keras", "EfficientNetB4", "Streamlit", "NumPy", "Pillow"],
+    link: "https://brain-tumor-detection-hemanth.streamlit.app/",
+    github: "https://github.com/Hemanth998999/brain-tumor-detection",
   },
   {
     title: "Community Connect Hub",
@@ -63,14 +70,24 @@ const ProjectsSection = () => {
                   ))}
                 </div>
               </div>
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
-                    <ExternalLink size={16} className="mr-1.5" />
-                    Live Demo
-                  </Button>
-                </a>
-              )}
+              <div className="flex gap-3">
+                {"github" in project && project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0">
+                      <Github size={16} className="mr-1.5" />
+                      GitHub
+                    </Button>
+                  </a>
+                )}
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
+                      <ExternalLink size={16} className="mr-1.5" />
+                      Live Demo
+                    </Button>
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
