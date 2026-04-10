@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -70,14 +70,24 @@ const ProjectsSection = () => {
                   ))}
                 </div>
               </div>
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
-                    <ExternalLink size={16} className="mr-1.5" />
-                    Live Demo
-                  </Button>
-                </a>
-              )}
+              <div className="flex gap-3">
+                {"github" in project && project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0">
+                      <Github size={16} className="mr-1.5" />
+                      GitHub
+                    </Button>
+                  </a>
+                )}
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
+                      <ExternalLink size={16} className="mr-1.5" />
+                      Live Demo
+                    </Button>
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
