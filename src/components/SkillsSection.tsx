@@ -7,11 +7,11 @@ const skillCategories = [
   },
   {
     title: "Machine Learning & AI",
-    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Feature Engineering"],
+    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "NLP", "Transformers", "Multimodal Learning", "Audio Processing", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Feature Engineering"],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["TensorFlow", "Keras", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Pillow"],
+    skills: ["TensorFlow", "Keras", "PyTorch", "Hugging Face", "RoBERTa", "Librosa", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Pillow"],
   },
   {
     title: "Web Development",

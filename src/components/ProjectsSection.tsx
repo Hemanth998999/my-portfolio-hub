@@ -5,16 +5,11 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Netflix Movie Recommendation System",
-    description: "Developed a machine learning-based recommendation system that suggests movies to users based on similarity between movie features and user preferences.",
-    tech: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
-    link: null,
-  },
-  {
-    title: "AI-Powered Traffic Sign Recognition",
-    description: "Built a deep learning model to recognize and classify traffic signs using the German Traffic Sign Recognition Benchmark (GTSRB) dataset.",
-    tech: ["Python", "TensorFlow", "CNN", "OpenCV"],
-    link: null,
+    title: "Dual Ambiguity Aware Multimodal Emotion Recognition",
+    description: "Built a deep learning web app that detects human emotions from both audio and text using multimodal fusion. Combines RoBERTa transformer-based text embeddings with Librosa MFCC audio features through cross-modal attention and gated fusion, deployed on Streamlit Cloud with confidence scores.",
+    tech: ["Python", "PyTorch", "RoBERTa", "Transformers", "Librosa", "Streamlit", "NLP", "Multimodal Learning"],
+    link: "https://hemanth-multimodal-emotion-recognition.streamlit.app/",
+    github: "https://github.com/Hemanth998999/multimodal-emotion-recognition",
   },
   {
     title: "Brain Tumor Detection (End-to-End)",
@@ -24,10 +19,30 @@ const projects = [
     github: "https://github.com/Hemanth998999/brain-tumor-detection",
   },
   {
+    title: "Dining Portal",
+    description: "Designed and developed a responsive dining portal with menu browsing, cart management, address handling, login, reviews, and upcoming reservations. Built as a multi-page web app with clean UI and interactive client-side functionality.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    link: "https://hemanth998999.github.io/Dining-Portal/",
+    github: "https://github.com/Hemanth998999/Dining-Portal",
+  },
+  {
     title: "Community Connect Hub",
     description: "Developed the frontend interface for a community platform that helps users discover local events and services. Implemented responsive UI components and integrated Firebase Authentication to enable secure user login and registration.",
     tech: ["HTML", "CSS", "JavaScript", "Angular", "Firebase Authentication"],
     link: "https://hemanth998999.github.io/Community-Connect-Hub/pages/community.html",
+    github: "https://github.com/Hemanth998999/Community-Connect-Hub",
+  },
+  {
+    title: "AI-Powered Traffic Sign Recognition",
+    description: "Built a deep learning model to recognize and classify traffic signs using the German Traffic Sign Recognition Benchmark (GTSRB) dataset.",
+    tech: ["Python", "TensorFlow", "CNN", "OpenCV"],
+    link: null,
+  },
+  {
+    title: "Netflix Movie Recommendation System",
+    description: "Developed a machine learning-based recommendation system that suggests movies to users based on similarity between movie features and user preferences.",
+    tech: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
+    link: null,
   },
 ];
 
