@@ -5,13 +5,18 @@ const experiences = [
   {
     title: "AI & Machine Learning Engineer Intern",
     organization: "IIDT Blackbuck",
-    duration: "December 2025 – Present",
+    duration: "22nd December 2025 – 21st April 2026",
     description:
-      "Practical training in AI and machine learning focusing on real-world problem solving, model development fundamentals, and modern AI tools and workflows.",
+      "Completed a 4-month (16-week, 240 hours) long-term internship covering the end-to-end AI/ML engineering lifecycle — from data analytics foundations to deep learning, NLP, and model deployment — followed by an individual capstone project.",
     highlights: [
-      "Understanding ML model lifecycle and workflow",
-      "Exploring AI tools and development environments",
-      "Applying data-driven thinking to practical scenarios",
+      "AI & ML foundations, business analytics, and data-driven decision making",
+      "Data preprocessing, feature engineering, EDA, and visualization",
+      "Regression, classification, K-Means clustering, and PCA",
+      "Deep Learning with TensorFlow & Keras (ANN, CNN, RNN, LSTM, GRU)",
+      "Natural Language Processing and text data preprocessing",
+      "Reinforcement Learning and Explainable AI (SHAP, LIME)",
+      "Model evaluation, hyperparameter tuning, and deployment as APIs / dashboards",
+      "End-to-end capstone project with mentor reviews and final grand assessment",
     ],
   },
   {
