@@ -7,7 +7,7 @@ const skillCategories = [
   },
   {
     title: "Machine Learning & AI",
-    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "NLP", "Transformers", "Multimodal Learning", "Audio Processing", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Feature Engineering"],
+    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "NLP", "Transformers", "Multimodal Learning", "Audio Processing", "CNN", "RNN", "LSTM", "GRU", "K-Means Clustering", "PCA", "Reinforcement Learning", "Explainable AI (SHAP, LIME)", "Business Analytics", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Hyperparameter Tuning", "Feature Engineering", "Model Deployment"],
   },
   {
     title: "Frameworks & Libraries",

@@ -16,11 +16,13 @@ import certHackerrankSql from "@/assets/cert-hackerrank-sql.jpg";
 import certUdemyMl from "@/assets/cert-udemy-ml.jpg";
 import certUdemyPython from "@/assets/cert-udemy-python.jpg";
 import certHackoverflow from "@/assets/cert-hackoverflow.jpg";
+import certBlackbucksAimlLT from "@/assets/cert-blackbucks-aiml-4month.jpg";
 
 const certifications = [
   {
     category: "Artificial Intelligence & Machine Learning",
     items: [
+      { name: "AI & ML Engineer – 4 Month Long-Term Internship", issuer: "Blackbucks Education", image: certBlackbucksAimlLT },
       { name: "Machine Learning A-Z: AI, Python & R + ChatGPT (2024)", issuer: "Udemy", image: certUdemyMl },
       { name: "AI & Machine Learning Course (Google for Developers)", issuer: "EduSkills", image: certGoogleAiml },
       { name: "AI Advanced", issuer: "Hexart", image: certHexartAdvance },
