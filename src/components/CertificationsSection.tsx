@@ -126,31 +126,33 @@ const CertificationsSection = () => {
           <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
             <span className="text-primary">⬡</span> Credly Badges
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {credlyBadges.map((badge, i) => (
               <motion.a
                 key={badge.name}
                 href={badge.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ scale: 1.05, y: -4 }}
-                className="glass-card rounded-lg p-4 flex flex-col items-center text-center group hover:border-primary/30 transition-colors"
+                transition={{ delay: i * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="glass-card rounded-lg p-5 flex items-center gap-4 group hover:border-primary/30 transition-colors"
               >
                 <img
                   src={badge.image}
                   alt={badge.name}
-                  className="w-20 h-20 object-contain mb-3"
+                  className="w-20 h-20 object-contain shrink-0 group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />
-                <p className="text-xs font-medium text-foreground leading-tight mb-1 group-hover:text-primary transition-colors">
-                  {badge.name}
-                </p>
-                <p className="text-xs text-muted-foreground">{badge.issuer}</p>
-                <p className="text-xs text-muted-foreground/60 mt-1">{badge.date}</p>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-semibold text-foreground leading-snug mb-1 group-hover:text-primary transition-colors">
+                    {badge.name}
+                  </p>
+                  <p className="text-xs text-primary/90">{badge.issuer}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{badge.date}</p>
+                </div>
               </motion.a>
             ))}
           </div>

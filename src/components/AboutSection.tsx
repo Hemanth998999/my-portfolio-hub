@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Brain, Code } from "lucide-react";
+import ProfileAvatar from "./ProfileAvatar";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-24 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,11 +22,15 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center md:items-start"
           >
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <div className="mb-6 md:hidden">
+              <ProfileAvatar size={140} />
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-6 text-center md:text-left">
               I am a Computer Science student specializing in Artificial Intelligence and Machine Learning at Sagi Rama Krishnam Raju Engineering College. I have experience building machine learning and deep learning projects, including recommendation systems and AI-based applications.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center md:text-left">
               I enjoy solving real-world problems using data, AI models, and modern technologies, and I am continuously learning new tools in AI, data analytics, and software development.
             </p>
           </motion.div>
@@ -46,9 +51,9 @@ const AboutSection = () => {
                 <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
                   <item.icon size={22} />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <p className="text-sm text-muted-foreground break-words">{item.desc}</p>
                 </div>
               </div>
             ))}

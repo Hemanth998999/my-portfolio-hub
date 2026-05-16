@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -6,10 +7,16 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="min-h-screen bg-background"
+    >
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -18,7 +25,8 @@ const Index = () => {
       <ExperienceSection />
       <CertificationsSection />
       <ContactSection />
-    </div>
+      <Footer />
+    </motion.div>
   );
 };
 

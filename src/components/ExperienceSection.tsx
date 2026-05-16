@@ -72,7 +72,7 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <section id="experience" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,72 +82,49 @@ const ExperienceSection = () => {
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">
             Professional growth
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold">
-            Virtual Internship Experience
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold">Virtual Internship Experience</h2>
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 -translate-x-1/2 hidden md:block" />
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-primary/20 md:hidden" />
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {experiences.map((exp, i) => (
               <motion.div
                 key={exp.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className="relative pl-12"
               >
-                {/* Timeline dot */}
-                <div className="absolute left-6 md:left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-1/2 mt-2 z-10 shadow-[0_0_8px_hsl(var(--primary)/0.5)]" />
+                <div className="absolute left-2.5 top-2 w-3 h-3 bg-primary rounded-full shadow-[0_0_12px_hsl(var(--primary)/0.6)] ring-4 ring-background" />
 
-                {/* Content card */}
-                <div
-                  className={`ml-12 md:ml-0 md:w-1/2 ${
-                    i % 2 === 0 ? "md:pr-12" : "md:pl-12"
-                  }`}
-                >
-                  <div className="glass-card rounded-lg p-6 hover:border-primary/30 transition-colors">
-                    <div className="flex items-center gap-2 text-primary mb-1">
-                      <Briefcase size={16} />
-                      <span className="text-xs font-mono uppercase tracking-wider">
-                        Virtual Internship
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">
-                      {exp.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
-                      <span className="flex items-center gap-1">
-                        <MapPin size={12} />
-                        {exp.organization}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} />
-                        {exp.duration}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      {exp.description}
-                    </p>
-                    <ul className="space-y-1">
-                      {exp.highlights.map((h) => (
-                        <li
-                          key={h}
-                          className="text-xs text-muted-foreground flex items-start gap-2"
-                        >
-                          <span className="text-primary mt-0.5">▹</span>
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="glass-card rounded-lg p-6 hover:border-primary/30 transition-colors">
+                  <div className="flex items-center gap-2 text-primary mb-1">
+                    <Briefcase size={16} />
+                    <span className="text-xs font-mono uppercase tracking-wider">Virtual Internship</span>
                   </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{exp.title}</h3>
+                  <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
+                    <span className="flex items-center gap-1">
+                      <MapPin size={12} />
+                      {exp.organization}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} />
+                      {exp.duration}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{exp.description}</p>
+                  <ul className="space-y-1">
+                    {exp.highlights.map((h) => (
+                      <li key={h} className="text-xs text-muted-foreground flex items-start gap-2">
+                        <span className="text-primary mt-0.5">▹</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}
