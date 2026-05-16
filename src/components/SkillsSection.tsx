@@ -1,32 +1,70 @@
 import { motion } from "framer-motion";
+import { Code2, Brain, Boxes, Globe, Database, Wrench, Sparkles, LucideIcon } from "lucide-react";
 
-const skillCategories = [
+type Skill = string | { name: string; featured?: boolean };
+
+const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = [
   {
     title: "Programming Languages",
-    skills: ["Python", "Java", "C", "JavaScript", "SQL"],
+    icon: Code2,
+    skills: [{ name: "Python", featured: true }, "Java", "C", "JavaScript", { name: "SQL", featured: true }],
   },
   {
     title: "Machine Learning & AI",
-    skills: ["Machine Learning", "Deep Learning", "Transfer Learning", "NLP", "Transformers", "Multimodal Learning", "Audio Processing", "CNN", "RNN", "LSTM", "GRU", "K-Means Clustering", "PCA", "Reinforcement Learning", "Explainable AI (SHAP, LIME)", "Business Analytics", "Data Analysis", "Data Preprocessing", "Model Evaluation", "Hyperparameter Tuning", "Feature Engineering", "Model Deployment"],
+    icon: Brain,
+    skills: [
+      { name: "Machine Learning", featured: true },
+      { name: "Deep Learning", featured: true },
+      "Transfer Learning",
+      { name: "NLP", featured: true },
+      "Transformers",
+      "Multimodal Learning",
+      "Audio Processing",
+      "CNN",
+      "RNN",
+      "LSTM",
+      "GRU",
+      "K-Means Clustering",
+      "PCA",
+      "Reinforcement Learning",
+      "Explainable AI (SHAP, LIME)",
+      "Business Analytics",
+      "Data Analysis",
+      "Data Preprocessing",
+      "Model Evaluation",
+      "Hyperparameter Tuning",
+      "Feature Engineering",
+      { name: "Model Deployment", featured: true },
+    ],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["TensorFlow", "Keras", "PyTorch", "Hugging Face", "RoBERTa", "Librosa", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Streamlit", "Pillow"],
+    icon: Boxes,
+    skills: [
+      { name: "TensorFlow", featured: true },
+      "Keras",
+      { name: "PyTorch", featured: true },
+      "Hugging Face",
+      "RoBERTa",
+      "Librosa",
+      "Scikit-Learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      { name: "Streamlit", featured: true },
+      "Pillow",
+    ],
   },
-  {
-    title: "Web Development",
-    skills: ["HTML", "CSS", "JavaScript", "MongoDB"],
-  },
-  {
-    title: "Databases",
-    skills: ["MongoDB", "MySQL"],
-  },
+  { title: "Web Development", icon: Globe, skills: ["HTML", "CSS", "JavaScript", "MongoDB"] },
+  { title: "Databases", icon: Database, skills: ["MongoDB", "MySQL"] },
   {
     title: "Tools & Platforms",
-    skills: ["Git & GitHub", "Git LFS", "Google Colab", "Jupyter Notebook", "VS Code", "Linux", "Streamlit Cloud"],
+    icon: Wrench,
+    skills: [{ name: "Git & GitHub", featured: true }, "Git LFS", "Google Colab", "Jupyter Notebook", "VS Code", "Linux", "Streamlit Cloud"],
   },
   {
     title: "AI & Productivity Tools",
+    icon: Sparkles,
     skills: ["ChatGPT", "GitHub Copilot", "Lovable", "Claude / AI Assistants", "Prompt Engineering"],
   },
 ];
@@ -45,29 +83,44 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold">Skills & Technologies</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((cat, i) => (
-            <motion.div
-              key={cat.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-lg p-6"
-            >
-              <h3 className="text-primary font-semibold mb-4 text-sm tracking-wide uppercase">{cat.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {cat.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border hover:border-primary/50 hover:text-primary transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillCategories.map((cat, i) => {
+            const Icon = cat.icon;
+            return (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="glass-card rounded-lg p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="text-foreground font-semibold text-sm tracking-wide uppercase">{cat.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((s) => {
+                    const skill = typeof s === "string" ? { name: s, featured: false } : s;
+                    return (
+                      <span
+                        key={skill.name}
+                        className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
+                          skill.featured
+                            ? "bg-primary/15 text-primary border-primary/40 hover:bg-primary/25"
+                            : "bg-secondary text-secondary-foreground border-border hover:border-primary/50 hover:text-primary"
+                        }`}
+                      >
+                        {skill.name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
