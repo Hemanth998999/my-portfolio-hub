@@ -10,7 +10,7 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
     skills: [{ name: "Python", featured: true }, "Java", "C", "JavaScript", { name: "SQL", featured: true }],
   },
   {
-    title: "Machine Learning & AI",
+    title: "ML Concepts",
     icon: Brain,
     skills: [
       { name: "Machine Learning", featured: true },
@@ -24,6 +24,12 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
       "RNN",
       "LSTM",
       "GRU",
+    ],
+  },
+  {
+    title: "ML Techniques",
+    icon: Brain,
+    skills: [
       "K-Means Clustering",
       "PCA",
       "Reinforcement Learning",
@@ -83,7 +89,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold">Skills & Technologies</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 items-start">
+        <div className="columns-1 md:columns-2 gap-6 [column-fill:_balance]">
           {skillCategories.map((cat, i) => {
             const Icon = cat.icon;
             return (
@@ -93,7 +99,7 @@ const SkillsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="glass-card rounded-lg p-6"
+                className="glass-card rounded-lg p-6 mb-6 break-inside-avoid"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg bg-primary/10 text-primary">
