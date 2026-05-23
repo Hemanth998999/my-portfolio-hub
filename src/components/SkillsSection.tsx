@@ -83,7 +83,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold">Skills & Technologies</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 items-start">
           {skillCategories.map((cat, i) => {
             const Icon = cat.icon;
             return (
@@ -103,17 +103,13 @@ const SkillsSection = () => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((s) => {
-                    const skill = typeof s === "string" ? { name: s, featured: false } : s;
+                    const name = typeof s === "string" ? s : s.name;
                     return (
                       <span
-                        key={skill.name}
-                        className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
-                          skill.featured
-                            ? "bg-primary/15 text-primary border-primary/40 hover:bg-primary/25"
-                            : "bg-secondary text-secondary-foreground border-border hover:border-primary/50 hover:text-primary"
-                        }`}
+                        key={name}
+                        className="px-3 py-1.5 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground border-border hover:border-primary/50 hover:text-primary transition-colors"
                       >
-                        {skill.name}
+                        {name}
                       </span>
                     );
                   })}
