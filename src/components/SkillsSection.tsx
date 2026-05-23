@@ -10,7 +10,7 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
     skills: [{ name: "Python", featured: true }, "Java", "C", "JavaScript", { name: "SQL", featured: true }],
   },
   {
-    title: "Machine Learning & AI",
+    title: "ML Concepts",
     icon: Brain,
     skills: [
       { name: "Machine Learning", featured: true },
@@ -24,6 +24,12 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
       "RNN",
       "LSTM",
       "GRU",
+    ],
+  },
+  {
+    title: "ML Techniques",
+    icon: Brain,
+    skills: [
       "K-Means Clustering",
       "PCA",
       "Reinforcement Learning",
