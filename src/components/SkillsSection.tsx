@@ -89,7 +89,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold">Skills & Technologies</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 items-start">
+        <div className="columns-1 md:columns-2 gap-6 [column-fill:_balance]">
           {skillCategories.map((cat, i) => {
             const Icon = cat.icon;
             return (
