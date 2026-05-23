@@ -19,11 +19,11 @@ const Index = () => {
     >
       <Navbar />
       <HeroSection />
-      <AboutSection />
+      <div className="bg-secondary/20"><AboutSection /></div>
       <SkillsSection />
-      <ProjectsSection />
+      <div className="bg-secondary/20"><ProjectsSection /></div>
       <ExperienceSection />
-      <CertificationsSection />
+      <div className="bg-secondary/20"><CertificationsSection /></div>
       <ContactSection />
       <Footer />
     </motion.div>
