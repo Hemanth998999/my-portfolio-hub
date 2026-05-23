@@ -85,25 +85,19 @@ const ExperienceSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold">Virtual Internship Experience</h2>
         </motion.div>
 
-        <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
-
-          <div className="space-y-8">
+        <div>
+          <div className="space-y-6">
             {experiences.map((exp, i) => (
               <motion.div
                 key={exp.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative pl-12"
+                transition={{ delay: i * 0.08 }}
               >
-                <div className="absolute left-2.5 top-2 w-3 h-3 bg-primary rounded-full shadow-[0_0_12px_hsl(var(--primary)/0.6)] ring-4 ring-background" />
-
                 <div className="glass-card rounded-lg p-6 hover:border-primary/30 transition-colors">
-                  <div className="flex items-center gap-2 text-primary mb-1">
+                  <div className="flex items-center gap-2 text-primary mb-2">
                     <Briefcase size={16} />
-                    <span className="text-xs font-mono uppercase tracking-wider">Virtual Internship</span>
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{exp.title}</h3>
                   <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">

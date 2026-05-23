@@ -41,7 +41,7 @@ const HeroSection = () => {
   const typed = useTypewriter(ROLES);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
@@ -73,7 +73,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight text-foreground"
           >
-            Yembuluri H N <span className="text-primary glow-text">Venkata Satya Narasimha</span>
+            <span className="block">Yembuluri H N</span>
+            <span className="block text-primary glow-text">Venkata Satya Narasimha</span>
           </motion.h1>
 
           <motion.div
