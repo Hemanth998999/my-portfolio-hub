@@ -102,17 +102,17 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mb-10"
+            className="flex flex-row flex-wrap items-center md:items-start justify-center md:justify-start gap-3 md:gap-4 mb-10"
           >
             <a href="/My_Resume.pdf" download="Venkata_Satya_Narasimha_Resume.pdf">
-              <Button className="rounded-full px-6 gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
-                <Download size={18} />
+              <Button className="rounded-full px-4 md:px-6 text-sm md:text-base gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Download size={16} />
                 Download Resume
               </Button>
             </a>
             <a href="#projects">
-              <Button variant="outline" className="rounded-full px-6 gap-2 border-primary/40 text-primary hover:bg-primary/10 hover:text-primary">
-                <FolderGit2 size={18} />
+              <Button variant="outline" className="rounded-full px-4 md:px-6 text-sm md:text-base gap-2 border-primary/40 text-primary hover:bg-primary/10 hover:text-primary">
+                <FolderGit2 size={16} />
                 View Projects
               </Button>
             </a>
