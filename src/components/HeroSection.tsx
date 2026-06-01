@@ -40,6 +40,7 @@ const useTypewriter = (words: string[], typeSpeed = 70, pauseTime = 1400) => {
 
 const HeroSection = () => {
   const typed = useTypewriter(ROLES);
+  const isMobile = useIsMobile();
 
   return (
     <section className="relative md:min-h-screen flex items-center justify-center overflow-hidden px-5 md:px-6 pt-[90px] pb-[60px] md:py-0 scroll-mt-[70px]">
