@@ -54,7 +54,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="shrink-0"
         >
-          <ProfileAvatar size={200} />
+          <ProfileAvatar className="size-[140px] md:!w-[200px] md:!h-[200px]" size={140} />
         </motion.div>
 
         <div className="flex-1 text-center md:text-left">
