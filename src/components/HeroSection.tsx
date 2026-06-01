@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download, Github, Linkedin, Mail, FolderGit2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProfileAvatar from "./ProfileAvatar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ROLES = [
   "AI & Machine Learning Student",
