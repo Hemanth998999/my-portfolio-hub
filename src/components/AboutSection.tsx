@@ -24,7 +24,7 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center md:items-start"
           >
-            <div className="mb-6 md:hidden">
+            <div className="mb-6 hidden">
               <ProfileAvatar size={140} />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 text-center md:text-left">

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download, Github, Linkedin, Mail, FolderGit2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProfileAvatar from "./ProfileAvatar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ROLES = [
   "AI & Machine Learning Student",
@@ -39,9 +40,10 @@ const useTypewriter = (words: string[], typeSpeed = 70, pauseTime = 1400) => {
 
 const HeroSection = () => {
   const typed = useTypewriter(ROLES);
+  const isMobile = useIsMobile();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+    <section className="relative md:min-h-screen flex items-center justify-center overflow-hidden px-5 md:px-6 pt-[90px] pb-[60px] md:py-0 scroll-mt-[70px]">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
@@ -54,7 +56,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="shrink-0"
         >
-          <ProfileAvatar size={200} />
+          <ProfileAvatar size={isMobile ? 140 : 200} />
         </motion.div>
 
         <div className="flex-1 text-center md:text-left">
@@ -100,17 +102,17 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mb-10"
+            className="flex flex-row flex-wrap items-center md:items-start justify-center md:justify-start gap-3 md:gap-4 mb-10"
           >
             <a href="/My_Resume.pdf" download="Venkata_Satya_Narasimha_Resume.pdf">
-              <Button className="rounded-full px-6 gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
-                <Download size={18} />
+              <Button className="rounded-full px-4 md:px-6 text-sm md:text-base gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Download size={16} />
                 Download Resume
               </Button>
             </a>
             <a href="#projects">
-              <Button variant="outline" className="rounded-full px-6 gap-2 border-primary/40 text-primary hover:bg-primary/10 hover:text-primary">
-                <FolderGit2 size={18} />
+              <Button variant="outline" className="rounded-full px-4 md:px-6 text-sm md:text-base gap-2 border-primary/40 text-primary hover:bg-primary/10 hover:text-primary">
+                <FolderGit2 size={16} />
                 View Projects
               </Button>
             </a>
