@@ -95,7 +95,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-muted-foreground max-w-2xl mb-8 leading-relaxed"
           >
-            Building intelligent solutions with machine learning, deep learning, and modern technologies. Passionate about solving real-world problems through data and AI.
+            A passionate AI & Machine Learning graduate from SRKR Engineering College, skilled in building intelligent solutions using deep learning, NLP, and computer vision. Eager to contribute to real-world AI projects and grow as a fresher in the tech industry.
           </motion.p>
 
           <motion.div

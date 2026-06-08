@@ -28,10 +28,10 @@ const AboutSection = () => {
               <ProfileAvatar size={140} />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 text-center md:text-left">
-              I am a Computer Science student specializing in Artificial Intelligence and Machine Learning at Sagi Rama Krishnam Raju Engineering College. I have experience building machine learning and deep learning projects, including recommendation systems and AI-based applications.
+              I am a B.Tech graduate in Computer Science (AI & ML) from Sagi Rama Krishnam Raju Engineering College (2026), with a CGPA of 8.76. I have hands-on experience building machine learning and deep learning projects including multimodal emotion recognition, brain tumor detection, and recommendation systems.
             </p>
             <p className="text-muted-foreground leading-relaxed text-center md:text-left">
-              I enjoy solving real-world problems using data, AI models, and modern technologies, and I am continuously learning new tools in AI, data analytics, and software development.
+              I am passionate about solving real-world problems through data and AI, and I am actively seeking opportunities to apply my skills as a fresher in the AI & ML domain.
             </p>
           </motion.div>
 
@@ -45,7 +45,7 @@ const AboutSection = () => {
             {[
               { icon: GraduationCap, title: "Education", desc: "B.Tech in CS (AI & ML) – SRKR Engineering College" },
               { icon: Brain, title: "Focus", desc: "Machine Learning, Deep Learning & AI Applications" },
-              { icon: Code, title: "Development", desc: "Full-stack web development with MEAN Stack" },
+              { icon: Code, title: "Development", desc: "Web app development using HTML, CSS, JavaScript, and Python-based Streamlit dashboards" },
             ].map((item, i) => (
               <div key={i} className="glass-card rounded-lg p-5 flex gap-4 items-start">
                 <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
