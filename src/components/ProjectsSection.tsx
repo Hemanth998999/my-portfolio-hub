@@ -22,7 +22,7 @@ const projects: Project[] = [
     link: "https://hemanth-multimodal-emotion-recognition.streamlit.app/",
     github: "https://github.com/Hemanth998999/multimodal-emotion-recognition",
     icon: Activity,
-    gradient: "from-fuchsia-500/30 via-primary/20 to-purple-500/30",
+    gradient: "from-primary/25 via-accent/10 to-transparent",
   },
   {
     title: "Brain Tumor Detection (End-to-End)",
@@ -32,7 +32,7 @@ const projects: Project[] = [
     link: "https://brain-tumor-detection-hemanth.streamlit.app/",
     github: "https://github.com/Hemanth998999/brain-tumor-detection",
     icon: Brain,
-    gradient: "from-primary/30 via-cyan-500/20 to-blue-500/30",
+    gradient: "from-primary/20 via-accent/15 to-transparent",
   },
   {
     title: "Dining Portal",
@@ -42,7 +42,7 @@ const projects: Project[] = [
     link: "https://hemanth998999.github.io/Dining-Portal/",
     github: "https://github.com/Hemanth998999/Dining-Portal",
     icon: Utensils,
-    gradient: "from-orange-500/30 via-amber-500/20 to-rose-500/30",
+    gradient: "from-accent/20 via-primary/15 to-transparent",
   },
   {
     title: "Community Connect Hub",
@@ -52,7 +52,7 @@ const projects: Project[] = [
     link: "https://hemanth998999.github.io/Community-Connect-Hub/pages/community.html",
     github: "https://github.com/Hemanth998999/Community-Connect-Hub",
     icon: Users,
-    gradient: "from-emerald-500/30 via-teal-500/20 to-primary/30",
+    gradient: "from-primary/25 via-accent/10 to-transparent",
   },
   {
     title: "AI-Powered Traffic Sign Recognition",
@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Deep learning model that recognizes and classifies traffic signs using the German Traffic Sign Recognition Benchmark (GTSRB) dataset.",
     tech: ["Python", "TensorFlow", "CNN", "OpenCV"],
     icon: TrafficCone,
-    gradient: "from-yellow-500/30 via-red-500/20 to-orange-500/30",
+    gradient: "from-accent/15 via-primary/20 to-transparent",
   },
   {
     title: "Netflix Movie Recommendation System",
@@ -68,7 +68,7 @@ const projects: Project[] = [
       "Machine learning recommendation system that suggests movies to users based on similarity between movie features and user preferences.",
     tech: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
     icon: Film,
-    gradient: "from-red-500/30 via-rose-500/20 to-pink-500/30",
+    gradient: "from-primary/20 via-accent/10 to-transparent",
   },
 ];
 
