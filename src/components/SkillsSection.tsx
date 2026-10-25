@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Brain, Boxes, Globe, Database, Wrench, Sparkles, LucideIcon } from "lucide-react";
+import { Code2, Brain, Boxes, Globe, Database, Wrench, Sparkles, Gauge, LucideIcon } from "lucide-react";
 
 type Skill = string | { name: string; featured?: boolean };
 
@@ -8,6 +8,18 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
     title: "Programming Languages",
     icon: Code2,
     skills: [{ name: "Python", featured: true }, "Java", "C", "JavaScript", { name: "SQL", featured: true }],
+  },
+  {
+    title: "GenAI & Inference Performance",
+    icon: Gauge,
+    skills: [
+      { name: "LLM Inference", featured: true },
+      { name: "Performance Benchmarking", featured: true },
+      "llama.cpp",
+      "vLLM",
+      "GenAI-Perf",
+      "Throughput & Latency Analysis",
+    ],
   },
   {
     title: "ML Concepts",
@@ -61,7 +73,7 @@ const skillCategories: { title: string; icon: LucideIcon; skills: Skill[] }[] = 
       "Pillow",
     ],
   },
-  { title: "Web Development", icon: Globe, skills: ["HTML", "CSS", "JavaScript", "MongoDB"] },
+  { title: "Web Development", icon: Globe, skills: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind CSS"] },
   { title: "Databases", icon: Database, skills: ["MongoDB", "MySQL"] },
   {
     title: "Tools & Platforms",

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Brain, Code } from "lucide-react";
+import { GraduationCap, Brain, Code, Cpu } from "lucide-react";
 import ProfileAvatar from "./ProfileAvatar";
 
 const AboutSection = () => {
@@ -28,10 +28,10 @@ const AboutSection = () => {
               <ProfileAvatar size={140} />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 text-center md:text-left">
-              I am a B.Tech graduate in Computer Science (AI & ML) from Sagi Rama Krishnam Raju Engineering College (2026), with a CGPA of 8.76. I have hands-on experience building machine learning and deep learning projects including multimodal emotion recognition, brain tumor detection, and recommendation systems.
+              I joined Micron Technology in Hyderabad in July 2026 as a software developer (contract, through Dexian India Technologies), where I work on GenAI workloads and AI inference performance analysis. Before that, I graduated with a B.Tech in Computer Science (AI & ML) from Sagi Rama Krishnam Raju Engineering College (2026), CGPA 8.76.
             </p>
             <p className="text-muted-foreground leading-relaxed text-center md:text-left">
-              I am passionate about solving real-world problems through data and AI, and I am actively seeking opportunities to apply my skills as a fresher in the AI & ML domain.
+              Alongside work, I build machine learning projects such as multimodal emotion recognition, brain tumor detection and recommendation systems, and I enjoy digging into how models actually perform on real hardware.
             </p>
           </motion.div>
 
@@ -43,8 +43,9 @@ const AboutSection = () => {
             className="grid gap-4"
           >
             {[
+              { icon: Cpu, title: "Currently", desc: "Software Developer (Contract) at Micron Technology via Dexian — GenAI workloads & AI inference performance" },
               { icon: GraduationCap, title: "Education", desc: "B.Tech in CS (AI & ML) – SRKR Engineering College" },
-              { icon: Brain, title: "Focus", desc: "Machine Learning, Deep Learning & AI Applications" },
+              { icon: Brain, title: "Focus", desc: "LLM inference, Deep Learning & AI Applications" },
               { icon: Code, title: "Development", desc: "Web app development using HTML, CSS, JavaScript, and Python-based Streamlit dashboards" },
             ].map((item, i) => (
               <div key={i} className="glass-card rounded-lg p-5 flex gap-4 items-start">

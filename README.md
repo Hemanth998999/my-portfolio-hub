@@ -1,10 +1,10 @@
-# 🤖 Yembuluri H N Venkata Satya Narasimha — AI & ML Portfolio
+# 🤖 Hemanth Yembuluri — AI/ML & GenAI Developer Portfolio
 
 <div align="center">
 
 ![Portfolio Preview](public/placeholder.svg)
 
-**AI & Machine Learning Student | Data & AI Enthusiast**
+**Software Developer @ Micron Technology (via Dexian) | GenAI & AI Inference Performance**
 
 [![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-00d4aa?style=for-the-badge)](https://portfolio-hemanth-yembuluri.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/venkata-satya-narasimha)
@@ -16,7 +16,7 @@
 
 ## 👋 About This Portfolio
 
-A personal portfolio website built to showcase my journey as an **AI & Machine Learning student** at SRKR Engineering College. It highlights my projects, skills, internship experience, and certifications in the field of AI, ML, and Data Science.
+A personal portfolio website showcasing my work as a software developer in GenAI and AI inference performance, along with my projects, skills, internships, and certifications. B.Tech in AI & ML, SRKR Engineering College (2026).
 
 🔗 **Live Site:** [portfolio-hemanth-yembuluri.vercel.app](https://portfolio-hemanth-yembuluri.vercel.app/)
 
@@ -28,7 +28,7 @@ A personal portfolio website built to showcase my journey as an **AI & Machine L
 - **About** — Background, education, and focus areas
 - **Skills** — Technologies across ML, Web Dev, Databases, and Tools
 - **Projects** — 6 hands-on projects with GitHub and Live Demo links
-- **Experience** — 5 virtual internships in AI, ML, Data Science, and Web Dev
+- **Experience** — Current role at Micron Technology (via Dexian) plus virtual internships in AI, ML, Data Science, and Web Dev
 - **Certifications** — Credly badges and course certifications
 - **Contact** — Contact form + email, LinkedIn, GitHub links
 
@@ -88,6 +88,7 @@ A personal portfolio website built to showcase my journey as an **AI & Machine L
 
 | Role | Organization | Period |
 |------|-------------|--------|
+| Software Developer (Contract) | Micron Technology (via Dexian) | Jul 2026 – Present |
 | AI & ML Engineer Intern | IIDT Blackbuck | Dec 2025 – Apr 2026 |
 | Data Science Master Virtual Intern | AICTE – EduSkills (Altair RapidMiner) | Jan 2026 – Mar 2026 |
 | AI & ML Virtual Intern | AICTE – EduSkills (Google for Developers) | Oct 2025 – Dec 2025 |

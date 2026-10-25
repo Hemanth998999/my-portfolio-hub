@@ -110,3 +110,15 @@ section {
   background: linear-gradient(90deg, transparent, hsl(44 51% 55% / 0.6), transparent);
   height: 1px;
 }
+
+/* Highlighted current-role card */
+.card-current {
+  background: linear-gradient(145deg, hsl(44 51% 55% / 0.08), hsl(0 0% 7% / 0.7));
+  border: 1px solid hsl(44 51% 55% / 0.35);
+  box-shadow: var(--shadow-glow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-bounce, .animate-pulse, .animate-ping { animation: none !important; }
+  html { scroll-behavior: auto; }
+}

@@ -48,7 +48,7 @@ const ContactSection = () => {
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">Get in touch</p>
           <h2 className="text-3xl md:text-5xl font-bold">Contact Me</h2>
           <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-            I'm always open to new opportunities and collaborations. Feel free to reach out!
+            Happy to talk about GenAI, inference performance, or collaborations. Feel free to reach out!
           </p>
         </motion.div>
 
