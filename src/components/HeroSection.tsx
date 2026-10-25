@@ -6,8 +6,8 @@ import ProfileAvatar from "./ProfileAvatar";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const ROLES = [
-  "AI & Machine Learning Student",
-  "Data & AI Enthusiast",
+  "GenAI & AI Inference Developer",
+  "Performance Benchmarking Engineer",
   "Deep Learning Practitioner",
   "Full-Stack Builder",
 ];
@@ -77,20 +77,23 @@ const HeroSection = () => {
           <ProfileAvatar size={isMobile ? 140 : 220} />
           <span className="absolute bottom-2 right-2 md:bottom-4 md:right-4 flex items-center gap-1.5 rounded-full bg-card border border-primary/40 px-3 py-1 text-[11px] font-medium text-primary">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Open to work
+            Micron Technology
           </span>
         </motion.div>
 
         <div className="flex-1 text-center md:text-left">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 text-primary font-mono text-xs mb-4 tracking-[0.3em] uppercase"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 mb-5 text-xs md:text-sm text-primary font-mono"
           >
-            <span className="hidden md:inline-block w-10 h-px bg-primary" />
-            Hello, I'm
-          </motion.p>
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
+            Software Developer @ Micron Technology · Hyderabad
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -98,8 +101,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-[1.05] tracking-tight"
           >
-            <span className="block text-foreground">Yembuluri H N</span>
-            <span className="block text-gradient-gold">Venkata Satya Narasimha</span>
+            <span className="block text-foreground">Hemanth</span>
+            <span className="block text-gradient-gold">Yembuluri</span>
           </motion.h1>
 
           <motion.div
@@ -118,7 +121,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-muted-foreground max-w-2xl mb-8 leading-relaxed"
           >
-            A passionate AI & Machine Learning graduate from SRKR Engineering College, skilled in building intelligent solutions using deep learning, NLP, and computer vision. Eager to contribute to real-world AI projects and grow as a fresher in the tech industry.
+            Software developer at Micron Technology (contract, via Dexian) working on GenAI workloads and AI inference performance analysis. B.Tech in AI & ML (2026) with hands-on projects in deep learning, NLP and computer vision.
           </motion.p>
 
           <motion.div
