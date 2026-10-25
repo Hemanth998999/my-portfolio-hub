@@ -2,6 +2,22 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin, ChevronDown } from "lucide-react";
 
+const current = {
+  title: "Software Developer (Contract)",
+  organization: "Micron Technology",
+  employer: "Employed via Dexian India Technologies",
+  location: "Hyderabad, India",
+  duration: "July 2026 – Present",
+  description:
+    "Working in Micron's memory organization on GenAI workloads and AI inference performance analysis, studying how modern LLM workloads behave on real hardware.",
+  highlights: [
+    "Benchmarking LLM inference using open-source serving and profiling tools such as llama.cpp, vLLM and GenAI-Perf",
+    "Analyzing throughput, latency and resource behaviour of GenAI workloads across configurations",
+    "Building scripts and use-case pipelines to run, repeat and compare AI workloads reliably",
+    "Documenting findings and working with the on-site team to turn results into usable insights",
+  ],
+};
+
 const featured = {
   title: "AI & Machine Learning Engineer Intern",
   organization: "IIDT Blackbuck",
@@ -121,8 +137,52 @@ const ExperienceSection = () => {
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">
             Professional growth
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold">Virtual Internship Experience</h2>
+          <h2 className="text-3xl md:text-5xl font-bold">Experience</h2>
         </motion.div>
+
+        {/* Current role */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-14"
+        >
+          <div className="card-current rounded-lg p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/15 text-primary text-xs font-mono px-3 py-1">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                Current role
+              </span>
+              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                <Calendar size={12} />
+                {current.duration}
+              </span>
+              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                <MapPin size={12} />
+                {current.location}
+              </span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">{current.title}</h3>
+            <p className="text-primary font-medium mt-1">{current.organization}</p>
+            <p className="text-xs text-muted-foreground mb-4">{current.employer}</p>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+              {current.description}
+            </p>
+            <ul className="space-y-2">
+              {current.highlights.map((h) => (
+                <li key={h} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="text-primary mt-0.5">▹</span>
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        <h3 className="text-sm font-mono tracking-widest uppercase text-muted-foreground mb-6 text-center">
+          Internships &amp; training
+        </h3>
+
 
         {/* Featured */}
         <motion.div
