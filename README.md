@@ -88,6 +88,7 @@ A personal portfolio website showcasing my work as a software developer in GenAI
 
 | Role | Organization | Period |
 |------|-------------|--------|
+| Software Developer (Contract) | Micron Technology (via Dexian) | Jul 2026 – Present |
 | AI & ML Engineer Intern | IIDT Blackbuck | Dec 2025 – Apr 2026 |
 | Data Science Master Virtual Intern | AICTE – EduSkills (Altair RapidMiner) | Jan 2026 – Mar 2026 |
 | AI & ML Virtual Intern | AICTE – EduSkills (Google for Developers) | Oct 2025 – Dec 2025 |
