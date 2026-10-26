@@ -64,6 +64,13 @@ const certifications = [
 
 const credlyBadges = [
   {
+    name: "Implement Event-Driven Messaging and Automation Workflows",
+    issuer: "Google Cloud",
+    date: "Oct 2026",
+    image: "https://images.credly.com/images/81d18a6f-00e5-42bf-83ca-c05f61b72f84/blob",
+    url: "https://www.credly.com/users/hemanth-yembuluri",
+  },
+  {
     name: "AI Fundamentals: Foundations for Understanding AI",
     issuer: "IBM SkillsBuild",
     date: "Jan 2026",
@@ -104,13 +111,13 @@ const CertificationsSection = () => {
   const [viewingCert, setViewingCert] = useState<string | null>(null);
 
   return (
-    <section id="certifications" className="py-24 px-6">
+    <section id="certifications" className="py-16 md:py-24 px-5 md:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">Verified credentials</p>
           <h2 className="text-3xl md:text-5xl font-bold">Certifications & Badges</h2>
@@ -143,7 +150,7 @@ const CertificationsSection = () => {
                 <img
                   src={badge.image}
                   alt={badge.name}
-                  className="w-20 h-20 object-contain shrink-0 group-hover:scale-105 transition-transform"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />
                 <div className="min-w-0 flex-1">

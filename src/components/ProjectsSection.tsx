@@ -74,13 +74,13 @@ const projects: Project[] = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-secondary/20">
+    <section id="projects" className="py-16 md:py-24 px-5 md:px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">What I've built</p>
           <h2 className="text-3xl md:text-5xl font-bold">Projects</h2>
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
                 whileHover={{ y: -4 }}
                 className="glass-card rounded-lg overflow-hidden flex flex-col group hover:border-primary/30 transition-colors"
               >
-                <div className={`h-32 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
+                <div className={`h-24 md:h-32 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,hsl(var(--background)/0.4)_100%)]" />
                   <Icon size={56} className="text-foreground/90 relative z-10 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
                 </div>
