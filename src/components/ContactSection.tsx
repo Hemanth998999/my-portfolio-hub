@@ -37,13 +37,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-secondary/20">
+    <section id="contact" className="py-16 md:py-24 px-5 md:px-6 bg-secondary/20">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">Get in touch</p>
           <h2 className="text-3xl md:text-5xl font-bold">Contact Me</h2>

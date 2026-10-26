@@ -9,7 +9,7 @@ const current = {
   location: "Hyderabad, India",
   duration: "July 2026 – Present",
   description:
-    "Working in Micron's memory organization on GenAI workloads and AI inference performance analysis, studying how modern LLM workloads behave on real hardware.",
+    "Working in the memory organization on GenAI workloads and AI inference performance analysis, studying how modern LLM workloads behave on real hardware.",
   highlights: [
     "Benchmarking LLM inference using open-source serving and profiling tools such as llama.cpp, vLLM and GenAI-Perf",
     "Analyzing throughput, latency and resource behaviour of GenAI workloads across configurations",
@@ -126,13 +126,13 @@ const ExperienceSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-16 md:py-24 px-5 md:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <p className="text-primary font-mono text-sm tracking-widest uppercase mb-2">
             Professional growth
